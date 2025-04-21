@@ -1,0 +1,12 @@
+.env
+*.log
+*.tmp
+*.swp
+.vscode/
+.idea/
+.DS_Store
+
+mysql-volume/
+
+**/docker-entrypoint-initdb.d/*
+!db_sql/  # Excepto carpeta de scripts iniciales si la tienes versionada
