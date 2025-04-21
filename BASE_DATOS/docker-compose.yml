@@ -1,0 +1,26 @@
+name: 'tests'
+
+services:
+  db:
+    image: mariadb:10.6.18
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "www"
+      MYSQL_USER: "www"
+      MYSQL_PASSWORD: "www"
+    volumes:
+      - ./db_sql:/docker-entrypoint-initdb.d
+      - mysql-volume:/var/lib/mysql
+    ports:
+      - 3306:3306
+volumes:
+  mysql-volume:
+
+
+
+
+
+
+
+
+
