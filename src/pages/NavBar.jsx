@@ -26,6 +26,9 @@ const Navbar = () => {
                 <Header title="Prueba para los test" />
                 <nav style={{ marginTop: "30px" }}>
                     <NavLink style={{ marginRight: "10px" }} to="/home">Home</NavLink>
+                    {user.role === 'admin' && (
+                        <NavLink style={{ marginRight: "10px" }} to="/admin">Admin</NavLink>
+                    )}
                     <button className="button" onClick={logout}>Cerrar sesión</button>
                 </nav>
             </header>

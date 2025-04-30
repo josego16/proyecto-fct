@@ -1,0 +1,99 @@
+.user-card {
+  background-color: #f9f9f9;
+  /* Fondo ligeramente gris para contraste */
+  border: 1px solid #dcdcdc;
+  /* Borde más suave */
+  border-radius: 12px;
+  /* Bordes redondeados */
+  padding: 20px;
+  max-width: 420px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Sombra más pronunciada */
+  font-family: 'Roboto', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card-title {
+  font-size: 1.8rem;
+  /* Título más grande */
+  color: #2c3e50;
+  /* Color oscuro para contraste */
+  font-weight: bold;
+}
+
+.user-card p {
+  font-size: 1rem;
+  color: #34495e;
+  /* Color de texto moderno */
+  margin: 10px 0;
+  line-height: 1.6;
+  /* Mejor legibilidad */
+}
+
+.user-card p strong {
+  color: #2c3e50;
+  /* Color consistente con el título */
+}
+
+.user-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Sombra más pronunciada al pasar el ratón */
+  transform: translateY(-6px);
+  /* Efecto de elevación */
+}
+
+.user-card-header {
+  border-bottom: 2px solid #dcdcdc;
+  /* Línea separadora */
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.user-card-body {
+  padding: 10px 0;
+}
+
+.user-card-actions {
+  display: flex;
+  justify-content: space-between;
+  /* Botones separados */
+  margin-top: 20px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-button {
+  background-color: #3498db;
+  /* Azul para editar */
+  color: #ffffff;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+  /* Azul más oscuro al pasar el ratón */
+  transform: scale(1.05);
+  /* Efecto de zoom */
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  /* Rojo para eliminar */
+  color: #ffffff;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+  /* Rojo más oscuro al pasar el ratón */
+  transform: scale(1.05);
+  /* Efecto de zoom */
+}

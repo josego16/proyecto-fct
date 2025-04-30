@@ -1,0 +1,89 @@
+.admin-panel {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  /* Fondo blanco */
+  border: 1px solid #e0e0e0;
+  /* Borde gris claro */
+  border-radius: 12px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Sombra ligera */
+  font-family: 'Roboto', sans-serif;
+}
+
+.admin-panel h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  /* Color oscuro para el título */
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #dcdcdc;
+  /* Línea separadora */
+  padding-bottom: 10px;
+}
+
+.admin-panel .user-list,
+.admin-panel .user-form {
+  margin-top: 20px;
+}
+
+.admin-panel .user-list {
+  padding: 10px;
+  background-color: #f9f9f9;
+  /* Fondo gris claro */
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+}
+
+.admin-panel .user-form {
+  padding: 20px;
+  background-color: #f4f4f4;
+  /* Fondo ligeramente más oscuro */
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+}
+
+.admin-panel .user-form h2 {
+  font-size: 1.5rem;
+  color: #34495e;
+  /* Color moderno */
+  margin-bottom: 15px;
+}
+
+.admin-panel button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-panel button:hover {
+  transform: scale(1.05);
+  /* Efecto de zoom */
+}
+
+.admin-panel .add-user-button {
+  background-color: #2ecc71;
+  /* Verde para agregar */
+  color: #ffffff;
+}
+
+.admin-panel .add-user-button:hover {
+  background-color: #27ae60;
+  /* Verde más oscuro */
+}
+
+.admin-panel .reset-button {
+  background-color: #e74c3c;
+  /* Rojo para resetear */
+  color: #ffffff;
+}
+
+.admin-panel .reset-button:hover {
+  background-color: #c0392b;
+  /* Rojo más oscuro */
+}

@@ -1,0 +1,19 @@
+name: 'tests'
+
+services:
+  db:
+    image: mariadb:latest  # Usar la última versión de MariaDB
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}  # Usa variables desde el .env por seguridad y reutilización
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./db_sql:/docker-entrypoint-initdb.d  # Scripts SQL de inicialización
+      - mysql-volume:/var/lib/mysql  # Volumen persistente para los datos de la base de datos
+    ports:
+      - "${MYSQL_PORT}:3306"  # Exponer el puerto
+    restart: unless-stopped  # Mejora de estabilidad: reinicia el contenedor si se detiene inesperadamente
+
+volumes:
+  mysql-volume:  # Volumen nombrado para persistencia

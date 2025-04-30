@@ -7,7 +7,7 @@ const Login = () => {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const [credentials, setCredentials] = useState({ username: "", password: "" });
+  const [credentials, setCredentials] = useState({ email: "", password: "" });
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
@@ -16,7 +16,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { error, data } = await login(credentials.username, credentials.password);
+    const { error, data } = await login(credentials.email, credentials.password);
     if (error) {
       setErrorMessage(data);
     } else {
@@ -25,30 +25,36 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Iniciar sesión</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="username"
-          placeholder="Usuario"
-          value={credentials.username}
-          onChange={handleChange}
-          required
-        />
-        <br />
-        <input
-          type="password"
-          name="password"
-          placeholder="Contraseña"
-          value={credentials.password}
-          onChange={handleChange}
-          required
-        />
-        <br />
-        <button type="submit">Entrar</button>
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h2>Iniciar sesión</h2>
+        <div className="input-group">
+          <label htmlFor="email">Correo Electrónico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Correo Electrónico"
+            value={credentials.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="input-group">
+          <label htmlFor="password">Contraseña</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Contraseña"
+            value={credentials.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button className="login-button" type="submit">Entrar</button>
+        {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       </form>
-      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
     </div>
   );
 };
